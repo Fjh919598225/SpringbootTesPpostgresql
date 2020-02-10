@@ -1,0 +1,22 @@
+server:
+  port: 80
+  tomcat:
+    uri-encoding: UTF-8
+
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 123456
+    url: jdbc:postgresql://localhost:5432/db_test
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    #防止启动时打印出“java.sql.SQLFeatureNotSupportedException: 这个 org.postgresql.jdbc.PgConnection.createClob() 方法尚未被实作。”的异常
+#    properties:
+#      hibernate:
+#        temp:
+#          use_jdbc_metadata_defaults: false
